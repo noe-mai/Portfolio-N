@@ -1,5 +1,9 @@
-import { Button, ButtonGroup } from "@chakra-ui/react"
-import { Box, Grid } from "@chakra-ui/react"
+import { Button, ButtonGroup } from "@chakra-ui/react";
+import { Box, Grid } from "@chakra-ui/react";
+import Contacto from "./Components/Contacto/Contacto";
+import Home from "./Components/Home/Home";
+import Footer from "./Components/Footer/Footer";
+import Navbar from "./Components/Navbar/Navbar";
 
 
 
