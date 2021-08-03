@@ -16,6 +16,8 @@ function App() {
  <Box w="100%" h="50px" />
 
  <Navbar />
+ <Home />
+ <Footer />
 
  <Box
   w="100%"
