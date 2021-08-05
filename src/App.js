@@ -9,6 +9,7 @@ import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Navbar/Navbar";
 import Skills from "./Components/Skills/Skills";
 import Intro from "./Components/Intro/Intro";
+import CustomButton from "./Components/CustomButton/Button";
 
 
 
@@ -23,6 +24,7 @@ function App() {
  <Footer />
  <Skills />
  <Intro />
+ <CustomButton texto = "click " />
  
 
  <Box
