@@ -3,7 +3,7 @@ import './Contacto.css';
 import {Box, Divider, Grid} from '@chakra-ui/react';
 
 const ContactIcons = () => {
-	return <div></div>;
+	return <>CONTACTO</>;
 };
 
 export default ContactIcons;

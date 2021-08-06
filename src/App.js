@@ -1,22 +1,27 @@
 import './App.css';
 import {Box, Grid} from '@chakra-ui/react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Contacto from './Components/Contacto/Contacto';
 import Home from './Components/Home/Home';
 import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
-import Skills from './Components/Skills/Skills';
-import Intro from './Components/Intro/Intro';
 import CustomButton from './Components/CustomButton/Button';
 
 function App() {
 	return (
-		<div>
+		<BrowserRouter>
 			<Navbar />
-			<Home />
+			<switch>
+				<Route exact path='/'>
+					<Home />
+					<CustomButton texto='click ' color='yellow' />
+				</Route>
+				<Route exact path='/Contacto'>
+					<Contacto />
+					<CustomButton texto='hola soy otro boton' />
+				</Route>
+			</switch>
 			<Footer />
-			<Contacto />
-			<CustomButton texto='click ' color='yellow' />
-			<CustomButton texto='hola soy otro boton' />
 
 			<Box
 				w='100%'
@@ -27,7 +32,7 @@ function App() {
 					'linear(to-b, orange.100, purple.300)',
 				]}
 			/>
-		</div>
+		</BrowserRouter>
 	);
 }
 
