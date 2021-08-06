@@ -8,7 +8,6 @@ const Home = () => {
 	return (
 		<>
 			<Intro nombre='Noe' />
-			<link to='/COntacto'>Ir a contacto</link>
 		</>
 	);
 };

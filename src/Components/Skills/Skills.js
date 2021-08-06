@@ -1,15 +1,15 @@
-import React from "react";
-import "./Skills.css";
+import React from 'react';
+import './Skills.css';
 
 const Skills = () => {
-return (
-    <div className = "icons">
-        <h3>Mis Skills</h3>
+	return (
+		<div className='icons'>
+			<h3>Mis Skills</h3>
 
-    </div>
-
-);
-
-}
+			<Link to='/contacto'>Ir a contacto</Link>
+			<Link to='/'> Volver a la home</Link>
+		</div>
+	);
+};
 
 export default Skills;

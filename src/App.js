@@ -11,7 +11,7 @@ function App() {
 	return (
 		<BrowserRouter>
 			<Navbar />
-			<switch>
+			<Switch>
 				<Route exact path='/'>
 					<Home />
 					<CustomButton texto='click ' color='yellow' />
@@ -20,7 +20,7 @@ function App() {
 					<Contacto />
 					<CustomButton texto='hola soy otro boton' />
 				</Route>
-			</switch>
+			</Switch>
 			<Footer />
 
 			<Box

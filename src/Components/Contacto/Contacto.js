@@ -2,8 +2,8 @@ import React from 'react';
 import './Contacto.css';
 import {Box, Divider, Grid} from '@chakra-ui/react';
 
-const ContactIcons = () => {
+const Contacto = () => {
 	return <>CONTACTO</>;
 };
 
-export default ContactIcons;
+export default Contacto;
