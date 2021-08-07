@@ -17,7 +17,11 @@ const Navbar = () => {
 				</BreadcrumbItem>
 
 				<BreadcrumbItem>
-					<BreadcrumbLink href='#'>About</BreadcrumbLink>
+					<BreadcrumbLink href='/intro'>Sobre mi</BreadcrumbLink>
+				</BreadcrumbItem>
+
+				<BreadcrumbItem>
+					<BreadcrumbLink href='/proyectos'>Proyectos</BreadcrumbLink>
 				</BreadcrumbItem>
 
 				<BreadcrumbItem>

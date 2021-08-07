@@ -12,7 +12,7 @@ const Intro = ({nombre}) => {
 		<header>
 			<Container maxW='container.lg'>
 				<Flex>
-					<Box display='flex' padding='4' bg='whiteAlpha' maxW='3xl'>
+					<Box display='flex' padding='4' bg='whiteAlpha' maxW='6xl'>
 						<h1>{nombre}</h1>
 						<Spacer />
 						<p>Desarrolladora Front-end </p>
