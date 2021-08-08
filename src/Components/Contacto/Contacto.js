@@ -8,8 +8,20 @@ const [info, setInfo] = useState('');
 
 return <div>
 <h3> {info} </h3>
-<button className = "boton" onClick={() => setInfo(mail)}>Mostrar mail</button>
-
+<Box
+  as="button"
+  p={4}
+  color="white"
+  fontWeight="bold"
+  borderRadius="md"
+  bgGradient="linear(to-r, teal.500,green.500)"
+  _hover={{
+    bgGradient: "linear(to-r, red.500, yellow.500)",
+  }}
+  onClick={() => setInfo(mail)}
+>
+  Mostrar mail
+</Box>
 
 
 
