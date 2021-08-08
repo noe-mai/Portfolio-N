@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './Contacto.css';
 import {Box, Divider, Grid} from '@chakra-ui/react';
 
@@ -8,7 +8,9 @@ const [info, setInfo] = useState('');
 
 return <div>
 <h3> {info} </h3>
-<button onClick={() => setInfo(mail)}>Mostrar mail</button>
+<button className = "boton" onClick={() => setInfo(mail)}>Mostrar mail</button>
+
+
 
 
 

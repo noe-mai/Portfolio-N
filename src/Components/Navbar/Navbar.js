@@ -1,6 +1,6 @@
 import React from 'react';
 import './Navbar.css';
-import {Box, Grid} from '@chakra-ui/react';
+import {Box, Grid, GridItem} from '@chakra-ui/react';
 import {
 	Breadcrumb,
 	BreadcrumbItem,
@@ -10,24 +10,29 @@ import {
 
 const Navbar = () => {
 	return (
+
 		<div>
-			<Breadcrumb separator='-'>
-				<BreadcrumbItem>
-					<BreadcrumbLink href='/'>Home</BreadcrumbLink>
+
+		<Grid templateColumns="repeat(4, 1fr)" gap={6}>
+  
+			<Breadcrumb separator='-' color = "pink">
+				<BreadcrumbItem color = "blue">
+				<BreadcrumbLink href='/'>Home</BreadcrumbLink>
 				</BreadcrumbItem>
 
 				<BreadcrumbItem>
-					<BreadcrumbLink href='/intro'>Sobre mi</BreadcrumbLink>
+				<BreadcrumbLink href='/intro'>Sobre mi</BreadcrumbLink>
 				</BreadcrumbItem>
 
 				<BreadcrumbItem>
-					<BreadcrumbLink href='/proyectos'>Proyectos</BreadcrumbLink>
+				<BreadcrumbLink href='/proyectos'>Proyectos</BreadcrumbLink>
 				</BreadcrumbItem>
 
 				<BreadcrumbItem>
-					<BreadcrumbLink href='/contacto'>Contact</BreadcrumbLink>
+				<BreadcrumbLink href='/contacto'>Contact</BreadcrumbLink>
 				</BreadcrumbItem>
 			</Breadcrumb>
+			</Grid>
 			<Box
 				w='100%'
 				h='200px'

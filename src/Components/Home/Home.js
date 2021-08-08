@@ -7,7 +7,12 @@ import {Container} from '@chakra-ui/react';
 
 const Home = () => {
 	return (
-		<Container maxW='container.xl'>
+		<Container>
+		<Box
+         w="100%"
+         h="100%"
+         bgGradient="linear(red.100 0%, orange.100 25%, yellow.100 50%)"/>
+
 		<Box padding="10" bg="pink" maxW="10xl">
         There are many benefits to a joint design and development system. Not only
         does it bring benefits to the design team.
