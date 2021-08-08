@@ -8,9 +8,10 @@ import {Container} from '@chakra-ui/react';
 const Home = () => {
 	return (
 		<Container maxW='container.xl'>
-			<Box w='100%'>
-				<Intro nombre='Noe' />
-			</Box>
+		<Box padding="10" bg="pink" maxW="10xl">
+        There are many benefits to a joint design and development system. Not only
+        does it bring benefits to the design team.
+        </Box>
 		</Container>
 	);
 };
