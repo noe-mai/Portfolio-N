@@ -22,7 +22,6 @@ function App() {
 				</Route>
 				<Route exact path='/contacto'>
 					<Contacto />
-					<CustomButton texto='hola soy otro boton' />
 				</Route>
 			</Switch>
 			<Footer />

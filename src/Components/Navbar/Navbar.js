@@ -7,7 +7,7 @@ import logo from '../../Images/logo.webp';
 
 const Navbar = () => {
 	return (
-		<Container maxW='1240px'>
+		<Container maxW='1240px' style={{position: 'sticky'}}>
 			<Flex p='20px' mb='30px' direction='row' justify='space-between'>
 				<Link to='/'>
 					<Avatar src={logo} />

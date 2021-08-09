@@ -1,29 +1,33 @@
 import React, {useEffect, useState} from 'react';
 import './Contacto.css';
-import {Box, Divider, Grid} from '@chakra-ui/react';
+import {Box, Flex, Heading, Container, Text} from '@chakra-ui/react';
+import Confetti from 'react-confetti';
 
 const Contacto = () => {
-	let mail = 'noelia.s.maiquez@gmail.com';
-	const [info, setInfo] = useState('');
+	const mail = 'noelia.s.maiquez at gmail.com';
+	const [mostrarMail, setMostrarMail] = useState(false);
+	const leftToRight = 'linear(to-l, #7928CA,#FF0080)';
+	const rightToLeft = 'linear(to-l, #FF0080, #7928CA)';
 
+	const toggleEmail = () => setMostrarMail(!mostrarMail);
+
+	// && es igual a entonces variable && <html>
 	return (
-		<div>
-			<h3> {info} </h3>
-			<Box
-				as='button'
-				p={4}
-				color='white'
-				fontWeight='bold'
-				borderRadius='md'
-				bgGradient='linear(to-r, teal.500,green.500)'
-				_hover={{
-					bgGradient: 'linear(to-r, red.500, yellow.500)',
-				}}
-				onClick={() => setInfo(mail)}
-			>
-				Mostrar mail
-			</Box>
-		</div>
+		<Container maxW='1240px' height='70vh'>
+			<Flex h='100%' direction='column' align='center' justify='center'>
+				{mostrarMail && <Confetti gravity={0.5} maxW='1240px' h='70vw' />}
+				<Text
+					style={{userSelect: 'none', cursor: 'pointer'}}
+					bgGradient={mostrarMail ? leftToRight : rightToLeft}
+					bgClip='text'
+					fontSize='5vw'
+					fontWeight='extrabold'
+					onClick={toggleEmail}
+				>
+					{mostrarMail ? mail : 'click aqui para ver email'}
+				</Text>
+			</Flex>
+		</Container>
 	);
 };
 
