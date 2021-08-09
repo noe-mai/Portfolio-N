@@ -1,44 +1,31 @@
 import React from 'react';
-import './Navbar.css';
-import {Box, Grid, GridItem} from '@chakra-ui/react';
-import {
-	Breadcrumb,
-	BreadcrumbItem,
-	BreadcrumbLink,
-	BreadcrumbSeparator,
-} from '@chakra-ui/react';
+import {Link} from 'react-router-dom';
+
+import {Box, Container, Avatar, Flex, HStack} from '@chakra-ui/react';
+
+import logo from '../../Images/logo.webp';
 
 const Navbar = () => {
 	return (
+		<Container maxW='1240px'>
+			<Flex p='20px' mb='30px' direction='row' justify='space-between'>
+				<Link to='/'>
+					<Avatar src={logo} />
+				</Link>
 
-		<div>
-
-		<Grid templateColumns="repeat(4, 1fr)" gap={6}>
-  
-			<Breadcrumb separator='-' color = "pink">
-				<BreadcrumbItem color = "blue">
-				<BreadcrumbLink href='/'>Home</BreadcrumbLink>
-				</BreadcrumbItem>
-
-				<BreadcrumbItem>
-				<BreadcrumbLink href='/intro'>Sobre mi</BreadcrumbLink>
-				</BreadcrumbItem>
-
-				<BreadcrumbItem>
-				<BreadcrumbLink href='/proyectos'>Proyectos</BreadcrumbLink>
-				</BreadcrumbItem>
-
-				<BreadcrumbItem>
-				<BreadcrumbLink href='/contacto'>Contact</BreadcrumbLink>
-				</BreadcrumbItem>
-			</Breadcrumb>
-			</Grid>
-			<Box
-				w='100%'
-				h='200px'
-				bgGradient='linear(red.100 0%, orange.100 25%, yellow.100 50%)'
-			/>
-		</div>
+				<HStack spacing='20px'>
+					<Box>
+						<Link to='/'>Sobre mi</Link>
+					</Box>
+					<Box>
+						<Link to='/proyectos'>Proyectos</Link>
+					</Box>
+					<Box>
+						<Link to='/contacto'>Contacto</Link>
+					</Box>
+				</HStack>
+			</Flex>
+		</Container>
 	);
 };
 
