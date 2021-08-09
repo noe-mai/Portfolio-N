@@ -1,22 +1,11 @@
 import React from 'react';
 import './Intro.css';
 import profilePic from './nn.png';
-import {
-	Container,
-	Flex,
-	Spacer,
-	Image,
-	Box,
-	Grid,
-	Avatar,
-	AvatarBadge,
-	AvatarGroup,
-	Heading,
-} from '@chakra-ui/react';
+import {Container, Flex, Image, Box, Avatar, Heading} from '@chakra-ui/react';
 
 const Intro = ({nombre}) => {
 	return (
-		<Box h='50vh' padding='40px'>
+		<Box h='50vh' padding='10px'>
 			<Flex direction='row' align='center'>
 				<Flex direction='column'>
 					<Heading as='h3' size='lg'>

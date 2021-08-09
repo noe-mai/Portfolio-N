@@ -20,9 +20,9 @@ import logoMsql from '../../Images/mysql.svg';
 
 const Skills = () => {
 	return (
-		<Flex direction='row' align='center'>
+		<Flex direction='row' align='center' h='20vh' p='15px'>
 			<Flex align='left' direction='column'>
-				<Heading as='h3' size='lg' p='5'>
+				<Heading as='h3' size='lg' pb='3'>
 					Tecnologias
 				</Heading>
 

@@ -22,7 +22,7 @@ const Proyectos = () => {
 	}
 
 	return (
-		<div>
+		<Box w='90vw' align='center' alignItems='center'>
 			<h3>{nombre}</h3>
 			<button onClick={() => setNombre('pepe')}>Cambiar nombre</button>
 			<Input
@@ -56,7 +56,7 @@ const Proyectos = () => {
 				))}
 			</Flex>
 			<Container className='proyectos'></Container>
-		</div>
+		</Box>
 	);
 };
 
