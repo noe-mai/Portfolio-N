@@ -1,10 +1,20 @@
 import React, {useState, useEffect} from 'react';
+import {extendTheme} from '@chakra-ui/react';
+import {createBreakpoints} from '@chakra-ui/theme-tools';
 
-import {Avatar, Box, Flex, Container, Center} from '@chakra-ui/react';
+import {
+	Avatar,
+	Box,
+	Flex,
+	Container,
+	Center,
+	useMediaQuery,
+} from '@chakra-ui/react';
 
 const HarryPotter = () => {
 	const [isLoading, setIsLoading] = useState(true);
 	const [personajes, setPersonajes] = useState([]);
+	const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)');
 
 	useEffect(() => {
 		fetch('http://hp-api.herokuapp.com/api/characters')
@@ -20,12 +30,17 @@ const HarryPotter = () => {
 	}
 
 	return (
-		<Box w='90vw' align='center' alignItems='center'>
-			<Flex flexWrap='wrap'>
+		<Box p={['5px', '30px']} alignItems='center'>
+			<Flex
+				flexWrap='wrap'
+				alignItems='center'
+				Flex
+				direction={['column', 'row']}
+			>
 				{personajes.map(({name, image, species, house}) => (
 					<Box
 						p='20px'
-						w='25%'
+						w={['100%', '100%', '50%', '50%', '25%']}
 						key={name}
 						borderWidth='5px'
 						borderRadius='lg'
@@ -45,7 +60,6 @@ const HarryPotter = () => {
 					</Box>
 				))}
 			</Flex>
-			<Container className='proyectos'></Container>
 		</Box>
 	);
 };

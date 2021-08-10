@@ -1,17 +1,17 @@
 import React from 'react';
 import './Intro.css';
 import profilePic from './nn.png';
-import {Container, Flex, Image, Box, Avatar, Heading} from '@chakra-ui/react';
+import {Flex, Image, Box, Heading} from '@chakra-ui/react';
 
 const Intro = ({nombre}) => {
 	return (
-		<Box h='50vh' padding='10px'>
-			<Flex direction='row' align='center'>
+		<Box minH='50vh' padding='10px'>
+			<Flex direction={['column', 'row']} align='center'>
 				<Flex direction='column'>
 					<Heading as='h3' size='lg'>
 						{nombre}
 					</Heading>
-					<Heading as='h4' size='md' mb='20px'>
+					<Heading as='h4' size='md' mb='20px' color={['#607B7B', 'black']}>
 						Desarrolladora Front-end{' '}
 					</Heading>
 					<Box display='flex' alignItems='center' bg='whiteAlpha' maxW='6xl'>
@@ -22,7 +22,7 @@ const Intro = ({nombre}) => {
 						specs, but in production
 					</Box>
 				</Flex>
-				<Box p='4'>
+				<Box p='30px' w={['80%', 'auto']} order={['first', 'auto']}>
 					<Image src={profilePic} className='foto' alt='foto noe' />
 				</Box>
 			</Flex>

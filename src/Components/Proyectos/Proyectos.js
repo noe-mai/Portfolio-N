@@ -8,7 +8,6 @@ import {
 	Box,
 	Flex,
 	Container,
-	Center,
 	Text,
 	Heading,
 	Image,
@@ -22,11 +21,14 @@ const Proyectos = () => {
 					<Image maxW='200px' src={harryPotterLogo} />
 					<Box ml='20px'>
 						<Heading>Harry Potter API</Heading>
-						<Text mb='10px'>
+						<Text mb='10px' mt='5px'>
 							Proyecto realizado con el objetivo de interactuar con la API de
 							Harry Potter para poder mostrar personajes y casas{' '}
 						</Text>
-						<Link to='/proyectos/harry-potter'>Ver Proyecto</Link>
+						<Link to='/proyectos/harry-potter'>
+							{' '}
+							<Text color='#DACA81'>Ver Proyecto</Text>
+						</Link>
 					</Box>
 				</Flex>
 			</Box>

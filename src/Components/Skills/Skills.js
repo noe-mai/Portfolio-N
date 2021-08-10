@@ -4,11 +4,11 @@ import './Skills.css';
 import {
 	Box,
 	Container,
-	Center,
 	Avatar,
 	Flex,
 	Heading,
 	Text,
+	useMediaQuery,
 } from '@chakra-ui/react';
 
 import logoHtml from '../../Images/html5.svg';
@@ -20,7 +20,7 @@ import logoMsql from '../../Images/mysql.svg';
 
 const Skills = () => {
 	return (
-		<Flex direction='row' align='center' h='20vh' p='15px'>
+		<Flex direction={['column', 'row']} align='center' minH='20vh' p='15px'>
 			<Flex align='left' direction='column'>
 				<Heading as='h3' size='lg' pb='3'>
 					Tecnologias
@@ -31,23 +31,23 @@ const Skills = () => {
 					Estas son las tecnologias que actualmente estoy aprendiendo{' '}
 				</Text>
 			</Flex>
-			<Flex alignItems='center'>
-				<Box p='10'>
+			<Flex alignItems='center' wrap='wrap'>
+				<Box w={['25%', 'auto']} p={['5px', '30px']}>
 					<Avatar src={logoHtml} bg='white' alt='foto lin' />
 				</Box>
-				<Box p='10'>
+				<Box w={['25%', 'auto']} p={['5px', '30px']}>
 					<Avatar src={logoCss} bg='white' alt='foto lin' />
 				</Box>
-				<Box p='10'>
+				<Box w={['25%', 'auto']} p={['5px', '30px']}>
 					<Avatar src={logoJs} bg='white' alt='foto lin' />
 				</Box>
-				<Box p='10'>
+				<Box w={['25%', 'auto']} p={['5px', '30px']}>
 					<Avatar src={logoReact} bg='white' alt='foto lin' />
 				</Box>
-				<Box p='10'>
+				<Box w={['25%', 'auto']} p={['5px', '30px']}>
 					<Avatar src={logoPhp} bg='white' alt='foto lin' />
 				</Box>
-				<Box p='10'>
+				<Box w={['25%', 'auto']} p={['5px', '30px']}>
 					<Avatar src={logoMsql} bg='white' alt='foto lin' />
 				</Box>
 			</Flex>
