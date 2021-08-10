@@ -2,6 +2,7 @@ import './App.css';
 import {Box, Heading} from '@chakra-ui/react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import HarryPotter from './Components/HarryPotter';
+import HarryPotterHouse from './Components/HarryPotter/House';
 import Proyectos from './Components/Proyectos/Proyectos';
 import Contacto from './Components/Contacto/Contacto';
 import Home from './Components/Home/Home';
@@ -20,6 +21,10 @@ const routes = [
 	{
 		path: '/proyectos/harry-potter',
 		component: HarryPotter,
+	},
+	{
+		path: '/proyectos/harry-potter/casas/:house',
+		component: HarryPotterHouse,
 	},
 	{
 		path: '/contacto',

@@ -1,20 +1,13 @@
 import React, {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom';
+import {Text} from '@chakra-ui/react';
 import {extendTheme} from '@chakra-ui/react';
-import {createBreakpoints} from '@chakra-ui/theme-tools';
 
-import {
-	Avatar,
-	Box,
-	Flex,
-	Container,
-	Center,
-	useMediaQuery,
-} from '@chakra-ui/react';
+import {Avatar, Box, Flex, Center, useMediaQuery} from '@chakra-ui/react';
 
 const HarryPotter = () => {
 	const [isLoading, setIsLoading] = useState(true);
 	const [personajes, setPersonajes] = useState([]);
-	const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)');
 
 	useEffect(() => {
 		fetch('http://hp-api.herokuapp.com/api/characters')
@@ -54,7 +47,12 @@ const HarryPotter = () => {
 									{name}{' '}
 								</Box>
 								<p> {species} </p>
-								<p> {house} </p>
+								<Link
+									to={`/proyectos/harry-potter/casas/${house.toLowerCase()}`}
+								>
+									{' '}
+									<Text>{house}</Text>
+								</Link>
 							</Flex>
 						</Flex>
 					</Box>
