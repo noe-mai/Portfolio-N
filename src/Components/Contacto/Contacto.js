@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './Contacto.css';
-import {Box, Flex, Heading, Container, Text} from '@chakra-ui/react';
+import {Flex, Container, Text} from '@chakra-ui/react';
 import Confetti from 'react-confetti';
 
 const Contacto = () => {
@@ -11,7 +11,7 @@ const Contacto = () => {
 
 	const toggleEmail = () => setMostrarMail(!mostrarMail);
 
-	// && es igual a entonces variable && <html>
+	//recordatorio && es igual a entonces variable && <html>
 	return (
 		<Container maxW='1240px' height='70vh'>
 			<Flex h='100%' direction='column' align='center' justify='center'>

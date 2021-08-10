@@ -1,64 +1,107 @@
-import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
-import {Text} from '@chakra-ui/react';
-import {extendTheme} from '@chakra-ui/react';
 
-import {Avatar, Box, Flex, Center, useMediaQuery} from '@chakra-ui/react';
+import {Box, Flex, Heading, Image, Container, Button} from '@chakra-ui/react';
+
+import logoGryffindor from '../../Images/gryffindor.png';
+import logoHufflepuff from '../../Images/hufflepuff.png';
+import logoSlytherin from '../../Images/slytherin.png';
+import logoRavenclaw from '../../Images/ravenclaw.png';
 
 const HarryPotter = () => {
-	const [isLoading, setIsLoading] = useState(true);
-	const [personajes, setPersonajes] = useState([]);
-
-	useEffect(() => {
-		fetch('http://hp-api.herokuapp.com/api/characters')
-			.then((response) => response.json())
-			.then((personajes) => {
-				setPersonajes(personajes);
-				setIsLoading(false);
-			});
-	}, []);
-
-	if (isLoading) {
-		return <Center h={'300px'}>Loading...</Center>;
-	}
-
 	return (
-		<Box p={['5px', '30px']} alignItems='center'>
-			<Flex
-				flexWrap='wrap'
-				alignItems='center'
-				Flex
-				direction={['column', 'row']}
-			>
-				{personajes.map(({name, image, species, house}) => (
-					<Box
-						p='20px'
-						w={['100%', '100%', '50%', '50%', '25%']}
-						key={name}
-						borderWidth='5px'
-						borderRadius='lg'
-						bgGradient='linear(to-r,gray.300,yellow.400,pink.200)'
+		<Container maxW='1240px' minH='70vh'>
+			<Flex alignItems='center' justify='space-between'>
+				<Box
+					d='flex'
+					flexDirection='column'
+					justifyContent='space-around'
+					p='20px'
+					w='280px'
+					h='500px'
+					bg='gray.100'
+					textAlign='center'
+					borderRadius='md'
+				>
+					<Heading>Gryffindor</Heading>
+					<Image src={logoGryffindor} size='lg' />
+					<Button
+						as={Link}
+						to='/proyectos/harry-potter/casas/gryffindor'
+						colorScheme='red'
+						variant='ghost'
 					>
-						<Flex>
-							<Avatar src={image} alt={name} size='2xl' />
-							<Flex ml='20px' direction='column' justify='center'>
-								<Box mt='2' fontWeight='semibold' as='h4'>
-									{' '}
-									{name}{' '}
-								</Box>
-								<p> {species} </p>
-								<Link
-									to={`/proyectos/harry-potter/casas/${house.toLowerCase()}`}
-								>
-									{' '}
-									<Text>{house}</Text>
-								</Link>
-							</Flex>
-						</Flex>
-					</Box>
-				))}
+						Ver Personajes
+					</Button>
+				</Box>
+				<Box
+					d='flex'
+					flexDirection='column'
+					justifyContent='space-around'
+					p='20px'
+					w='280px'
+					h='500px'
+					bg='gray.100'
+					textAlign='center'
+					borderRadius='md'
+				>
+					<Heading>Slytherin</Heading>
+					<Image src={logoSlytherin} />
+					<Button
+						as={Link}
+						to='/proyectos/harry-potter/casas/slytherin'
+						colorScheme='green'
+						variant='ghost'
+					>
+						Ver Personajes
+					</Button>
+				</Box>
+
+				<Box
+					d='flex'
+					flexDirection='column'
+					justifyContent='space-around'
+					p='20px'
+					w='280px'
+					h='500px'
+					bg='gray.100'
+					textAlign='center'
+					borderRadius='md'
+				>
+					<Heading>Hufflepuff</Heading>
+					<Image src={logoHufflepuff} />
+					<Button
+						as={Link}
+						to='/proyectos/harry-potter/casas/hufflepuff'
+						colorScheme='yellow'
+						variant='ghost'
+					>
+						Ver Personajes
+					</Button>
+				</Box>
+				<Box
+					d='flex'
+					flexDirection='column'
+					justifyContent='space-around'
+					p='20px'
+					w='280px'
+					h='500px'
+					bg='gray.100'
+					textAlign='center'
+					borderRadius='md'
+				>
+					<Heading>Ravenclaw</Heading>
+					<Image src={logoRavenclaw} />
+					<Button
+						as={Link}
+						to='/proyectos/harry-potter/casas/ravenclaw'
+						colorScheme='blue'
+						variant='ghost'
+					>
+						Ver Personajes
+					</Button>
+				</Box>
 			</Flex>
-		</Box>
+		</Container>
 	);
 };
 
