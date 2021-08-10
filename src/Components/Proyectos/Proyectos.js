@@ -1,62 +1,36 @@
 import React, {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom';
 import './Proyectos.css';
-import {Input, Avatar, Box, Flex, Container, Center} from '@chakra-ui/react';
+import harryPotterLogo from '../../Images/harry-potter.jpg';
+import {
+	Input,
+	Avatar,
+	Box,
+	Flex,
+	Container,
+	Center,
+	Text,
+	Heading,
+	Image,
+} from '@chakra-ui/react';
 
 const Proyectos = () => {
-	const [isLoading, setIsLoading] = useState(true);
-	const [nombre, setNombre] = useState('Noe');
-	const [apellido, setApellido] = useState('Mai');
-	const [personajes, setPersonajes] = useState([]);
-
-	useEffect(() => {
-		fetch('http://hp-api.herokuapp.com/api/characters')
-			.then((response) => response.json())
-			.then((personajes) => {
-				setPersonajes(personajes);
-				setIsLoading(false);
-			});
-	}, []);
-
-	if (isLoading) {
-		return <Center h={'300px'}>Loading...</Center>;
-	}
-
 	return (
-		<Box w='90vw' align='center' alignItems='center'>
-			<h3>{nombre}</h3>
-			<button onClick={() => setNombre('pepe')}>Cambiar nombre</button>
-			<Input
-				value={apellido}
-				onChange={({target}) => setApellido(target.value)}
-			/>
-			<h3>{apellido} </h3>
-
-			<Flex flexWrap='wrap'>
-				{personajes.map(({name, image, species, house}) => (
-					<Box
-						p='20px'
-						w='25%'
-						key={name}
-						borderWidth='5px'
-						borderRadius='lg'
-						bgGradient='linear(to-r,gray.300,yellow.400,pink.200)'
-					>
-						<Flex>
-							<Avatar src={image} alt={name} size='2xl' />
-							<Flex ml='20px' direction='column' justify='center'>
-								<Box mt='2' fontWeight='semibold' as='h4'>
-									{' '}
-									{name}{' '}
-								</Box>
-								<p> {species} </p>
-								<p> {house} </p>
-							</Flex>
-						</Flex>
+		<Container maxW='1240px' minH='70vh'>
+			<Box w='600px' p='20px' border='1px solid #607B7B' borderRadius='4px'>
+				<Flex align='center'>
+					<Image maxW='200px' src={harryPotterLogo} />
+					<Box ml='20px'>
+						<Heading>Harry Potter API</Heading>
+						<Text mb='10px'>
+							Proyecto realizado con el objetivo de interactuar con la API de
+							Harry Potter para poder mostrar personajes y casas{' '}
+						</Text>
+						<Link to='/proyectos/harry-potter'>Ver Proyecto</Link>
 					</Box>
-				))}
-			</Flex>
-			<Container className='proyectos'></Container>
-		</Box>
+				</Flex>
+			</Box>
+		</Container>
 	);
 };
 
