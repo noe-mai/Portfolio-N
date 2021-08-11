@@ -20,7 +20,7 @@ const House = () => {
 	const casa = buscarCasa(house);
 
 	useEffect(() => {
-		fetch(`http://hp-api.herokuapp.com/api/characters/house/${house}`)
+		fetch(`https://hp-api.herokuapp.com/api/characters/house/${house}`)
 			.then((response) => response.json())
 			.then((data) => {
 				setPersonajes(data);
