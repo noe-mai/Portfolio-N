@@ -51,7 +51,7 @@ const House = () => {
 			</Flex>
 			<Button colorScheme={casa.color} variant='ghost'>
 				<Link to='/proyectos/harry-potter'>
-					<Text pb='0px'> Volver a Casas</Text>{' '}
+					<Text pb='0px'>Volver a Casas</Text>{' '}
 				</Link>
 			</Button>
 			<Flex
