@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {useParams} from 'react-router-dom';
+import {useParams, Link} from 'react-router-dom';
 import {Avatar, Box, Flex, Center, Heading} from '@chakra-ui/react';
 
 const House = () => {
@@ -21,13 +21,20 @@ const House = () => {
 	}
 
 	return (
-		<Box p={['5px', '30px']} alignItems='center'>
+		<Box minH='70vh' p={['5px', '30px']} alignItems='center'>
 			<Heading>{house}</Heading>
-			<Flex flexWrap='wrap' alignItems='center' direction={['column', 'row']}>
+			<Link to='/proyectos/harry-potter'>Ver todas las Casas</Link>
+			<Flex
+				style={{gap: '20px'}}
+				flexWrap='wrap'
+				alignItems='center'
+				direction={['column', 'row']}
+			>
 				{personajes.map(({name, image, species, house}) => (
 					<Box
 						p='20px'
-						w={['100%', '100%', '50%', '50%', '25%']}
+						mb='20px'
+						w={['100%', '100%', '50%', '50%', '24%']}
 						key={name}
 						borderWidth='5px'
 						borderRadius='lg'

@@ -7,99 +7,62 @@ import logoHufflepuff from '../../Images/hufflepuff.png';
 import logoSlytherin from '../../Images/slytherin.png';
 import logoRavenclaw from '../../Images/ravenclaw.png';
 
+const CardHouse = ({nombre, color, logo, url}) => {
+	return (
+		<Box
+			d='flex'
+			flexDirection='column'
+			justifyContent='space-around'
+			p='20px'
+			w='280px'
+			h='500px'
+			bg='gray.100'
+			textAlign='center'
+			borderRadius='md'
+		>
+			<Heading>{nombre}</Heading>
+			<Image src={logo} size='lg' />
+			<Button as={Link} to={url} colorScheme={color} variant='ghost'>
+				Ver Personajes
+			</Button>
+		</Box>
+	);
+};
+
+const casas = [
+	{
+		nombre: 'Gryffindor',
+		color: 'red',
+		logo: logoGryffindor,
+		url: '/proyectos/harry-potter/casas/gryffindor',
+	},
+	{
+		nombre: 'Slytherin',
+		color: 'green',
+		logo: logoSlytherin,
+		url: '/proyectos/harry-potter/casas/slytherin',
+	},
+	{
+		nombre: 'Hufflepuff',
+		color: 'yellow',
+		logo: logoHufflepuff,
+		url: '/proyectos/harry-potter/casas/hufflepuff',
+	},
+	{
+		nombre: 'Ravenclaw',
+		color: 'blue',
+		logo: logoRavenclaw,
+		url: '/proyectos/harry-potter/casas/ravenclaw',
+	},
+];
+
 const HarryPotter = () => {
 	return (
 		<Container maxW='1240px' minH='70vh'>
-			<Flex alignItems='center' justify='space-between'>
-				<Box
-					d='flex'
-					flexDirection='column'
-					justifyContent='space-around'
-					p='20px'
-					w='280px'
-					h='500px'
-					bg='gray.100'
-					textAlign='center'
-					borderRadius='md'
-				>
-					<Heading>Gryffindor</Heading>
-					<Image src={logoGryffindor} size='lg' />
-					<Button
-						as={Link}
-						to='/proyectos/harry-potter/casas/gryffindor'
-						colorScheme='red'
-						variant='ghost'
-					>
-						Ver Personajes
-					</Button>
-				</Box>
-				<Box
-					d='flex'
-					flexDirection='column'
-					justifyContent='space-around'
-					p='20px'
-					w='280px'
-					h='500px'
-					bg='gray.100'
-					textAlign='center'
-					borderRadius='md'
-				>
-					<Heading>Slytherin</Heading>
-					<Image src={logoSlytherin} />
-					<Button
-						as={Link}
-						to='/proyectos/harry-potter/casas/slytherin'
-						colorScheme='green'
-						variant='ghost'
-					>
-						Ver Personajes
-					</Button>
-				</Box>
-
-				<Box
-					d='flex'
-					flexDirection='column'
-					justifyContent='space-around'
-					p='20px'
-					w='280px'
-					h='500px'
-					bg='gray.100'
-					textAlign='center'
-					borderRadius='md'
-				>
-					<Heading>Hufflepuff</Heading>
-					<Image src={logoHufflepuff} />
-					<Button
-						as={Link}
-						to='/proyectos/harry-potter/casas/hufflepuff'
-						colorScheme='yellow'
-						variant='ghost'
-					>
-						Ver Personajes
-					</Button>
-				</Box>
-				<Box
-					d='flex'
-					flexDirection='column'
-					justifyContent='space-around'
-					p='20px'
-					w='280px'
-					h='500px'
-					bg='gray.100'
-					textAlign='center'
-					borderRadius='md'
-				>
-					<Heading>Ravenclaw</Heading>
-					<Image src={logoRavenclaw} />
-					<Button
-						as={Link}
-						to='/proyectos/harry-potter/casas/ravenclaw'
-						colorScheme='blue'
-						variant='ghost'
-					>
-						Ver Personajes
-					</Button>
-				</Box>
+			<Flex wrap='wrap' alignItems='center' justify='space-between'>
+				{casas.map(({nombre, color, logo, url}) => (
+					<CardHouse nombre={nombre} color={color} logo={logo} url={url} />
+				))}
 			</Flex>
 		</Container>
 	);
