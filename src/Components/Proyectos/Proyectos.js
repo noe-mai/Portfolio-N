@@ -1,17 +1,6 @@
-import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
-import './Proyectos.css';
 import harryPotterLogo from '../../Images/harry-potter.jpg';
-import {
-	Input,
-	Avatar,
-	Box,
-	Flex,
-	Container,
-	Text,
-	Heading,
-	Image,
-} from '@chakra-ui/react';
+import {Box, Flex, Container, Text, Heading, Image} from '@chakra-ui/react';
 
 const Proyectos = () => {
 	return (

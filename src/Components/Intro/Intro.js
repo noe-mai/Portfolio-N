@@ -1,5 +1,4 @@
 import React from 'react';
-import './Intro.css';
 import profilePic from './nn.png';
 import {Flex, Image, Box, Heading} from '@chakra-ui/react';
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import './Footer.css';
 import {Box, Container, Flex, Avatar, Text} from '@chakra-ui/react';
 
 import logoGit from '../../Images/git-hub.svg';

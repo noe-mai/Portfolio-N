@@ -1,4 +1,3 @@
-import './App.css';
 import {Box, Heading} from '@chakra-ui/react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import HarryPotter from './Components/HarryPotter';

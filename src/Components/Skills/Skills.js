@@ -1,15 +1,6 @@
 import React from 'react';
-import './Skills.css';
 
-import {
-	Box,
-	Container,
-	Avatar,
-	Flex,
-	Heading,
-	Text,
-	useMediaQuery,
-} from '@chakra-ui/react';
+import {Box, Avatar, Flex, Heading, Text} from '@chakra-ui/react';
 
 import logoHtml from '../../Images/html5.svg';
 import logoCss from '../../Images/css-3.svg';

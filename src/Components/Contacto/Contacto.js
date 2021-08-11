@@ -1,5 +1,4 @@
-import React, {useEffect, useState} from 'react';
-import './Contacto.css';
+import React, {useState} from 'react';
 import {Flex, Container, Text} from '@chakra-ui/react';
 import Confetti from 'react-confetti';
 
