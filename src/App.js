@@ -22,7 +22,7 @@ const routes = [
 		component: HarryPotter,
 	},
 	{
-		path: '/proyectos/harry-potter/casas/:house',
+		path: '/proyectos/harry-potter/:house',
 		component: HarryPotterHouse,
 	},
 	{
@@ -37,7 +37,7 @@ function App() {
 			<Navbar />
 			<Switch>
 				{routes.map(({path, component}) => (
-					<Route exact path={path} component={component} />
+					<Route key={path} exact path={path} component={component} />
 				))}
 				<Route path='*'>
 					<Box d='flex' justifyContent='center' alignItems='center' h='60vh'>

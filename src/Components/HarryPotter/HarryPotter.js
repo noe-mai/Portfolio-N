@@ -2,10 +2,7 @@ import {Link} from 'react-router-dom';
 
 import {Box, Flex, Heading, Image, Container, Button} from '@chakra-ui/react';
 
-import logoGryffindor from '../../Images/gryffindor.png';
-import logoHufflepuff from '../../Images/hufflepuff.png';
-import logoSlytherin from '../../Images/slytherin.png';
-import logoRavenclaw from '../../Images/ravenclaw.png';
+import {casas} from './casas';
 
 const CardHouse = ({nombre, color, logo, url}) => {
 	return (
@@ -29,39 +26,18 @@ const CardHouse = ({nombre, color, logo, url}) => {
 	);
 };
 
-const casas = [
-	{
-		nombre: 'Gryffindor',
-		color: 'red',
-		logo: logoGryffindor,
-		url: '/proyectos/harry-potter/casas/gryffindor',
-	},
-	{
-		nombre: 'Slytherin',
-		color: 'green',
-		logo: logoSlytherin,
-		url: '/proyectos/harry-potter/casas/slytherin',
-	},
-	{
-		nombre: 'Hufflepuff',
-		color: 'yellow',
-		logo: logoHufflepuff,
-		url: '/proyectos/harry-potter/casas/hufflepuff',
-	},
-	{
-		nombre: 'Ravenclaw',
-		color: 'blue',
-		logo: logoRavenclaw,
-		url: '/proyectos/harry-potter/casas/ravenclaw',
-	},
-];
-
 const HarryPotter = () => {
 	return (
 		<Container maxW='1240px' minH='70vh'>
 			<Flex wrap='wrap' alignItems='center' justify='space-between'>
 				{casas.map(({nombre, color, logo, url}) => (
-					<CardHouse nombre={nombre} color={color} logo={logo} url={url} />
+					<CardHouse
+						key={nombre}
+						nombre={nombre}
+						color={color}
+						logo={logo}
+						url={url}
+					/>
 				))}
 			</Flex>
 		</Container>
