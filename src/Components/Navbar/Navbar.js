@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import styled from '@emotion/styled';
 
-import {Box, Container, Avatar, Flex, HStack} from '@chakra-ui/react';
+import {Box, Container, Avatar, Flex, HStack, Text} from '@chakra-ui/react';
 
 import logo from '../../Images/logo.webp';
 
@@ -25,14 +25,36 @@ const Navbar = () => {
 				</Logo>
 
 				<HStack spacing='20px'>
-					<Box>
-						<Link to='/'>Sobre mi</Link>
+					<Box
+						_hover={{
+							borderBottom: '1px',
+							color: 'gray.200',
+						}}
+					>
+						<Link to='/'>
+							<Text color='#171923'>Sobre mi</Text>
+						</Link>
 					</Box>
-					<Box>
-						<Link to='/proyectos'>Proyectos</Link>
+
+					<Box
+						_hover={{
+							borderBottom: '1px',
+							color: 'gray.200',
+						}}
+					>
+						<Link to='/proyectos'>
+							<Text color='#171923'>Proyectos</Text>
+						</Link>
 					</Box>
-					<Box>
-						<Link to='/contacto'>Contacto</Link>
+					<Box
+						_hover={{
+							borderBottom: '1px',
+							color: 'gray.200',
+						}}
+					>
+						<Link to='/contacto'>
+							<Text color='#171923'>Contacto</Text>
+						</Link>
 					</Box>
 				</HStack>
 			</Flex>
